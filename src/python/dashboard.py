@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_autorefresh import st_autorefresh
 import pandas as pd
 import joblib
 import requests
@@ -278,8 +279,13 @@ def start_iot_server_background() -> None:
 
 
 def main() -> None:
-    start_iot_server_background()
     st.set_page_config(layout="wide", page_title="Geo Fire - Monitoramento de Queimadas")
+
+    if "iot_server_started" not in st.session_state:
+        start_iot_server_background()
+        st.session_state.iot_server_started = True
+
+    st_autorefresh(interval=30_000, key="iot_refresh")
 
     st.title("🔥 Geo Fire: Monitoramento de queimadas")
 
