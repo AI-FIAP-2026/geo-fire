@@ -43,8 +43,8 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 📎 Links
 
-- <b>Vídeo (Demo):</b> https://youtu.be/JCbrSeO46HI
-- <b>Documentação Completa:</b> `docs/Geo Fire - Monitoramento Inteligente de Queimadas.pdf`
+- **Vídeo (Demo)**: https://youtu.be/JCbrSeO46HI
+- **Documentação Completa**: [Geo Fire - Monitoramento Inteligente de Queimadas](docs/Geo%20Fire%20-%20Monitoramento%20Inteligente%20de%20Queimadas.pdf)
 
 ## 🔧 Como executar o código
 
