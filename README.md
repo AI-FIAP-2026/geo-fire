@@ -43,8 +43,8 @@ Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
 ## 📎 Links
 
-- <b>Vídeo (Demo):</b> https://youtu.be/dQPKdV9qiJ4
-- <b>Documentação Completa:</b> Arquivo `Documentacao.md` na raiz do repositório.
+- <b>Vídeo (Demo):</b> https://youtu.be/JCbrSeO46HI
+- <b>Documentação Completa:</b> `docs/Geo Fire - Monitoramento Inteligente de Queimadas.pdf`
 
 ## 🔧 Como executar o código
 
