@@ -4,39 +4,75 @@
   "editor": "wokwi",
   "parts": [
     { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
-    { "type": "wokwi-dht22", "id": "dht1", "top": -160, "left": -220, "rotate": 270, "attrs": { "humidity": "66" } },
-    { "type": "wokwi-gas-sensor", "id": "mq2", "top": -160, "left": 160, "attrs": {} },
-    { "type": "wokwi-potentiometer", "id": "pot_rain", "top": 200, "left": -220, "attrs": { "label": "Rain" } },
-    { "type": "wokwi-potentiometer", "id": "pot_soil", "top": 200, "left": -60, "attrs": { "label": "Soil" } },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -158.4,
+      "left": -219.3,
+      "rotate": 270,
+      "attrs": { "humidity": "66" }
+    },
+    {
+      "type": "wokwi-gas-sensor",
+      "id": "mq2",
+      "top": -160.5,
+      "left": 151,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot_rain",
+      "top": 242.1,
+      "left": -133.4,
+      "rotate": 180,
+      "attrs": { "label": "Rain" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot_soil",
+      "top": 242.1,
+      "left": -37.4,
+      "rotate": 180,
+      "attrs": { "label": "Soil" }
+    },
     { "type": "wokwi-led", "id": "led1", "top": -160, "left": 360, "attrs": { "color": "red" } },
-    { "type": "wokwi-resistor", "id": "r1", "top": -90, "left": 430, "rotate": 90, "attrs": { "value": "220" } },
-    { "type": "wokwi-buzzer", "id": "bz1", "top": 40, "left": 380, "attrs": { "volume": "0.1" } }
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -72,
+      "left": 306.65,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 31.2,
+      "left": 222.6,
+      "attrs": { "volume": "0.1" }
+    }
   ],
   "connections": [
-    ["esp:TX", "$serialMonitor:RX", "", []],
-    ["esp:RX", "$serialMonitor:TX", "", []],
-
-    ["dht1:VCC", "esp:5V", "red", ["h-40", "v-20"]],
-    ["dht1:GND", "esp:GND.1", "black", ["h-20", "v-20"]],
-    ["dht1:SDA", "esp:4", "green", ["v0"]],
-
-    ["mq2:VCC", "esp:5V", "red", ["h0", "v-20"]],
-    ["mq2:GND", "esp:GND.2", "black", ["h20", "v-20"]],
-    ["mq2:AO", "esp:D34", "green", ["v0"]],
-
-    ["pot_rain:VCC", "esp:3V3", "red", ["v-40", "h0"]],
-    ["pot_rain:GND", "esp:GND.2", "black", ["v-20", "h0"]],
-    ["pot_rain:SIG", "esp:D35", "purple", ["v0"]],
-
-    ["pot_soil:VCC", "esp:3V3", "red", ["v-40", "h20"]],
-    ["pot_soil:GND", "esp:GND.2", "black", ["v-20", "h20"]],
-    ["pot_soil:SIG", "esp:D32", "orange", ["v0"]],
-
-    ["led1:A", "esp:D2", "blue", ["h0", "v-20"]],
-    ["led1:C", "r1:1", "blue", ["v0"]],
-    ["r1:2", "esp:GND.1", "black", ["h0", "v20"]],
-
-    ["bz1:2", "esp:D26", "red", ["v0"]],
-    ["bz1:1", "esp:GND.3", "black", ["v0"]]
-  ]
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:5V", "red", [ "h57.6", "v289.6", "h81.41" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "h86.4", "v268.8" ] ],
+    [ "dht1:SDA", "esp:4", "green", [ "h67.2", "v239.9" ] ],
+    [ "mq2:VCC", "esp:5V", "red", [ "v56.2", "h-292.39" ] ],
+    [ "mq2:GND", "esp:GND.2", "black", [ "v89.3", "h-3.3" ] ],
+    [ "mq2:AO", "esp:D34", "green", [ "v0" ] ],
+    [ "pot_rain:VCC", "esp:3V3", "red", [ "h0.8", "v-38.4", "v-182.4" ] ],
+    [ "pot_rain:GND", "esp:GND.2", "black", [ "v-28.8", "h201.6", "v-192" ] ],
+    [ "pot_rain:SIG", "esp:D35", "purple", [ "v0" ] ],
+    [ "pot_soil:VCC", "esp:3V3", "red", [ "h0.8", "v-25.4", "v-195.4" ] ],
+    [ "pot_soil:GND", "esp:GND.2", "black", [ "v-15.8", "h115.2", "v-205" ] ],
+    [ "pot_soil:SIG", "esp:D32", "orange", [ "v0" ] ],
+    [ "led1:A", "esp:D2", "blue", [ "v338.8", "h-385", "v-48" ] ],
+    [ "led1:C", "r1:1", "blue", [ "h-39", "v22" ] ],
+    [ "r1:2", "esp:GND.1", "black", [ "v267.6", "h-355.2", "v-76.8" ] ],
+    [ "bz1:2", "esp:D26", "red", [ "v0" ] ],
+    [ "bz1:1", "esp:GND.3", "black", [ "h-96", "v-28.8" ] ]
+  ],
+  "dependencies": {}
 }
