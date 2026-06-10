@@ -33,7 +33,7 @@ Para isso, o ecossistema cruza dados abertos de satélites da **NASA (FIRMS)** c
 
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
-- <b>docs</b>: Pasta contendo insumos das fases anteriores de planejamento. A documentação completa final encontra-se na raiz do projeto em `Documentacao.md`.
+- <b>docs</b>: Pasta contendo a documentação completa do projeto (`Geo Fire - Monitoramento Inteligente de Queimadas.pdf`).
 - <b>src</b>: Todo o código fonte desenvolvido, incluindo:
   - `/python`: Scripts de coleta e enriquecimento de dados via API (`collect_weather.py`), Notebooks de ML exploratório (`analise_firms.ipynb`), Servidor IoT em FastAPI e o Dashboard interativo via Streamlit.
   - `/r`: Scripts voltados para estatística não-supervisionada (`kmeans_risco.R`).
